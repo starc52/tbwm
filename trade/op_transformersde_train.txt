@@ -1,0 +1,2 @@
+Loading VAE at epoch 149 with test error 70.99726449523926
+

@@ -1,0 +1,33 @@
+/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Process Process-11:
+Traceback (most recent call last):
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "traincontroller.py", line 100, in slave_routine
+    r_queue.put((s_id, r_gen.rollout(params)))
+  File "/home/starc/Robotics/transformers-wm/utils/misc.py", line 205, in rollout
+    while True:
+  File "/home/starc/Robotics/transformers-wm/utils/misc.py", line 175, in get_action_and_transition
+    self.prev_actions_buffer = self.prev_actions_buffer[-self.latents_buffer_size:]
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/starc/Robotics/transformers-wm/models/transformers_de.py", line 161, in forward
+    outs = self.transformer_encoder(ins, self.src_mask)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 181, in forward
+    output = mod(output, src_mask=mask, src_key_padding_mask=src_key_padding_mask)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 297, in forward
+    src2 = self.linear2(self.dropout(self.activation(self.linear1(src))))
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 93, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/starc/miniconda3/envs/robo/lib/python3.8/site-packages/torch/nn/functional.py", line 1694, in linear
+    output += bias
+KeyboardInterrupt
